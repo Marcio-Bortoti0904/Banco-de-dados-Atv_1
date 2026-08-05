@@ -26,5 +26,6 @@ INSERT INTO Produtos(id, Nome, Preco, categoria_id) VALUES(105, 'SmartWatch', 40
 SELECT * FROM Produtos WHERE Preco > 50;
 
 -- Questão 3 - Usando Join para ordenar tabela
-SELECT Produtos.Nome, Categorias.Nome FROM Produtos
-JOIN Categorias ON Produtos.categoria_id = Categorias.id;
+SELECT Produtos.Nome AS Produto, Categorias.Nome AS Categoria FROM Produtos 
+JOIN Categorias ON Produtos.categoria_id = Categorias.id
+ORDER BY Produtos.Nome;
